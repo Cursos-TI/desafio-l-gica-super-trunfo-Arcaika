@@ -64,84 +64,96 @@ int main() {
    scanf("%f", &Area2);
    printf("Digite a densidade (hab/km²): \n");
    scanf("%f", &Densidade2);
+
+   
+    printf("\n----------------------------------\n"); /*Para melhor organização*/
+    printf("Cartas de cidades do Estado %s\n",Estado1);
+    printf("\n");/*Para melhor organização*/
+
+    printf("Código da cidade: %s\n",Codigo1);
+    printf("Nome da cidade: %s\n", Nome1);
+    printf("Número da população: %d\n", Populacao1);
+    printf("Pib da cidade: %f\n",Pib1);
+    printf("Número de pontos turisticos: %d\n",PontosTuristicos1);
+    printf("Área da cidade: %f\n",Area1);
+    printf("A densidade demográfica da cidade:%f\n", Densidade1);
+
+    printf("\n----------------------------------\n"); /*Para melhor organização*/
+    printf("Cartas de cidades do Estado %s\n",Estado2);
+    printf("\n");/*Para melhor organização*/
+
+    printf("Código da cidade: %s\n",Codigo2);
+    printf("Nome da cidade: %s\n", Nome2);
+    printf("Número da população: %d\n", Populacao2);
+    printf("Pib da cidade: %f\n",Pib2);
+    printf("Número de pontos turisticos: %d\n",PontosTuristicos2);
+    printf("Área da cidade: %f\n",Area2);
+    printf("A densidade demográfica da cidade:%f\n", Densidade2);
+
+
+    printf("\n----------------------------------\n"); /*Para melhor organização*/
      
-   printf("\n----------------------------------\n"); /*Para melhor organização*/
-
-
     // Comparação de Cartas:
     // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
-printf("Escolha uma das opções:\n");
-printf("1-Comparação de população\n");
-printf("2-Comparação de PIB\n");
-printf("3-Comparação de Pontos Turisticos\n");
-printf("4-Comparação de Area\n");
-printf("5-Comparação de Densidade\n");
+    printf("Escolha o atributo de compração:\n");
+    printf("1-Comparação de população\n");
+    printf("2-Comparação de PIB\n");
+    printf("3-Comparação de Pontos Turisticos\n");
+    printf("4-Comparação de Area\n");
+    printf("5-Comparação de Densidade\n");
+    scanf("%d", &Opcoes);
 
     switch (Opcoes){
     case 1:
     if (Populacao1>Populacao2){
-    printf("Carta 1 venceu!\n");
+    printf("A cidade %s tem maior população!\n", Nome1);
     }else if (Populacao1<Populacao2){
-    printf("Carta 2 venceu!\n");
+    printf("A cidade %s tem maior população!\n", Nome2);
     }else{
-    printf("Ocorreu empate!\n");
+    printf("Ambas as cidades tem o mesmo número de população!\n");
     }
     break;
     case 2:
     if (Pib1>Pib2){
-        printf("Carta 1 venceu!\n");
+        printf("A cidade %s tem maior PIB!\n",Nome1);
         }else if (Pib1<Pib2){
-        printf("Carta 2 venceu!\n");
+        printf("A cidade %s tem maior PIB\n",Nome2);
         }else{
-        printf("Ocorreu empate!\n");
+        printf("Ambas as cidades tem o mesmo PIB!\n");
         }
     break;
     case 3:
     if (PontosTuristicos1>PontosTuristicos2){
-        printf("Carta 1 venceu!\n");
+        printf("A cidade %s tem mais pontos turísticos!\n",Nome1);
         }else if (PontosTuristicos1<PontosTuristicos2){
-        printf("Carta 2 venceu!\n");
+        printf("A cidade %s tem mais pontos turísticos!\n",Nome2);
         }else{
-        printf("Ocorreu empate!\n");
+        printf("Ambas as cidades tem o mesmo número de pontos turísticos!\n");
         }
     break;    
     case 4:
     if (Area1>Area2){
-        printf("Carta 1 venceu!\n");
+        printf("A cidade %s tem a área maior!\n",Nome1);
         }else if (Area1<Area2){
-        printf("Carta 2 venceu!\n");
+        printf("A cidade %s tem a área maior!\n",Nome2);
         }else{
-        printf("Ocorreu empate!\n");
+        printf("Ambas as cidades tem o mesmo número de área!\n");
         }
     break;
     case 5:
-    if (Densidade1>Densidade2){
-        printf("Carta 1 venceu!\n");
-        }else if (Densidade1<Densidade2){
-        printf("Carta 2 venceu!\n");
+    if (Densidade1<Densidade2){
+        printf("A cidade %s é a vencedora! Tem menor densidade\n",Nome1);
+        }else if (Densidade1>Densidade2){
+        printf("A cidade %s é a vencedora! Tem menor densidade!\n",Nome2);
         }else{
-        printf("Ocorreu empate!\n");
+        printf("Ambas cidades tem a mesma densidade\n");
         }    
     break;    
 default:
 printf("Opção inválida!\n");
     break;
-    
-return 0;    
+}    
+   
+    return 0;    
 }
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
 
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
-
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
-
-    return 0;
-}
