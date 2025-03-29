@@ -15,7 +15,7 @@ int main() {
     int PontosTuristicos1;
     float Area1;
     float Densidade1;
-    
+    int Opcoes;
    /*--------------------------------------*/
     char Estado2 [20];
     char Codigo2 [4];  
@@ -77,7 +77,7 @@ printf("3-Comparação de Pontos Turisticos\n");
 printf("4-Comparação de Area\n");
 printf("5-Comparação de Densidade\n");
 
-    switch (Opçoes){
+    switch (Opcoes){
     case 1:
     if (Populacao1>Populacao2){
     printf("Carta 1 venceu!\n");
